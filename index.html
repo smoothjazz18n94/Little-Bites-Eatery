@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Bites Eatery</title>
+    <style>
+  /* Reset default browser spacing */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Page background and font */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff8f3; /* warm pastel background */
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Header section */
+  header {
+    background-color: #ffb84d; /* soft orange */
+    text-align: center;
+    padding: 30px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  /* Navigation bar */
+  nav {
+    background-color: #333;
+    padding: 10px 0;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    color: #ffb84d; /* hover color */
+  }
+
+  /* Section styling */
+  section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+  }
+
+  section h2 {
+    color: #ff8c1a;
+    margin-bottom: 15px;
+  }
+
+  section img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+  }
+</style>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>LITTLE BITES EATERY</h1>
+        <hr>
+        <img src="litt.jpg.jpg" alt="Freshly baked pastries">
+        
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#About-Us">About Us</a></li>
+                <li><a href="#Contact-Us">Contact</a></li>
+                <li><a href="#Order">Order</a></li>
+
+                
+</section>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="Home">
+            <h2>Home</h2>
+            <p>Welcome to <strong>Little Bites Eatery</strong> — your cozy corner for freshly baked pastries, made with love and warmth every single day.</p>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="Menu">
+            <h2>Bakery Menu</h2>
+            <img src="li.jpg" alt="Bites display">
+
+            <p><i>Croissant - GH₵10</i></p>
+            <hr>
+            <p><i>Chocolate Croissant - GH₵15</i></p>
+            <hr>
+            <p><i>Sausage Rolls - GH₵10</i></p>
+            <hr>
+            <p><i>Sweet Buns - GH₵15</i></p>
+            <ul>
+                <li>Cinnamon Buns</li>
+                <li>Sticky Buns</li>
+                <li>Hot Cross Buns</li>
+            </ul>
+            <hr>
+
+            <p><i>Pies - GH₵10</i></p>
+            <ul>
+                <li>Meat Pie</li>
+                <li>Fish Pie</li>
+                <li>Vegetable Pie</li>
+            </ul>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="About-Us">
+            <h2>Our Story</h2>
+            <p>
+                <strong>Little Bites</strong> is a bakery shop located in the Malejor neighborhood of Adenta Dodowa Road. 
+                Serving sourdough breads, pies, conchas, and a variety of croissants, we use French baking techniques and 
+                locally inspired flavors to create a rotating menu of handcrafted baked goods. 
+                The menu also features many plant-based options.
+            </p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="Contact-Us">
+            <h2>Contact Us</h2>
+            <address>
+                <p>Email: <a href="mailto:littlebites@pastery.com">littlebites@pastery.com</a></p>
+                <p>Phone: 020000000</p>
+                <p>Location: Oyibi-Malejor</p>
+            </address>
+        </section>
+        <section id="Order">
+  <h2>Place Your Order</h2>
+  <form action="https://formspree.io/f/xvgvgpze" method="POST">
+    <label for="name">Full Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="item">Select Item:</label><br>
+    <select id="item" name="item" required>
+      <option value="">--Choose an item--</option>
+      <option value="croissant">Croissant</option>
+      <option value="chocolate-croissant">Chocolate Croissant</option>
+      <option value="sweet-buns">Sweet Buns</option>
+      <option value="meat-pie">Meat Pie</option>
+    </select><br><br>
+
+    <label for="quantity">Quantity:</label><br>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
+
+    <button type="submit">Submit Order</button>
+  </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Little Bites Eatery. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
