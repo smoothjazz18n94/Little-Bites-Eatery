@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smoothjazz18n94.github.io/Little-Bites-Eatery/sitemap.xml
