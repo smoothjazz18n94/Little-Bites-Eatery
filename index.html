@@ -1,207 +1,1053 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <base target="_self">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Bites Eatery</title>
-    <style>
-  /* Reset default browser spacing */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  /* Page background and font */
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff8f3; /* warm pastel background */
-    color: #333;
-    line-height: 1.6;
-  }
-
-  /* Header section */
-  header {
-    background-color: #ffb84d; /* soft orange */
-    text-align: center;
-    padding: 30px 10px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-    color: #fff;
-  }
-
-  /* Navigation bar */
-  nav {
-    background-color: #333;
-    padding: 10px 0;
-  }
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-  }
-
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  nav ul li a:hover {
-    color: #ffb84d; /* hover color */
-  }
-
-  /* Section styling */
-  section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-  }
-
-  section h2 {
-    color: #ff8c1a;
-    margin-bottom: 15px;
-  }
-
-  section img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    margin: 15px 0;
-  }
-
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 30px;
-  }
-</style>
-
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="Little Bites Eatery – fresh pastries, croissants, and buns in Oyibi-Malejor. Baked fresh daily with love and quality.">
-<meta name="keywords" content="Little Bites Eatery, bakery Ghana, pastries, croissants, Oyibi, buns, food">
-<meta name="author" content="Little Bites Eatery">
-
+    <title>Little Bites Bakery | Online Pastry Ordering</title>
+    <meta name="description" content="Order delicious pastries, refreshing smoothies, and fresh fruit juices online. Little bites pastries perfect for any occasion.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B4513",
+                        secondary: "#D2691E",
+                        accent: "#FFD700",
+                        cream: "#FFF8DC",
+                        berry: "#8B0000",
+                        mint: "#98FB98"
+                    },
+                    fontFamily: {
+                        'display': ['"Playfair Display"', 'serif'],
+                        'body': ['"Open Sans"', 'sans-serif']
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.3s ease-out'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+<body class="min-h-screen bg-cream font-body text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-cookie-bite text-white text-xl"></i>
+                    </div>
+                    <h1 class="text-2xl font-display font-bold text-primary">Little<span class="text-accent">Bites</span></h1>
+                </div>
 
-<body>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Home</a>
+                    <a href="#pastries" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Pastries</a>
+                    <a href="#smoothies" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Smoothies</a>
+                    <a href="#juices" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Juices</a>
+                    <a href="#order" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Order Online</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors duration-300">Contact</a>
+                </nav>
 
-    <header>
-        <h1>LITTLE BITES EATERY</h1>
-        <hr>
-        <img src="litt.jpg.jpg" alt="Freshly baked pastries">
-        
-        <nav>
-            <ul>
-                <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+                <!-- Cart & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="cartButton" class="relative p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-shopping-cart text-primary text-xl"></i>
+                        <span id="cartCount" class="absolute -top-1 -right-1 bg-berry text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                    </button>
+                    <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                        <i class="fas fa-bars text-primary text-xl"></i>
+                    </button>
+                </div>
+            </div>
 
-
-
-                
-</section>
-
-            </ul>
-        </nav>
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="md:hidden hidden py-4 border-t">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Home</a>
+                    <a href="#pastries" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Pastries</a>
+                    <a href="#smoothies" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Smoothies</a>
+                    <a href="#juices" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Juices</a>
+                    <a href="#order" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Order Online</a>
+                    <a href="#contact" class="mobile-nav-link py-2 text-gray-700 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <!-- Home Section -->
-        <section id="Home">
-            <h2>Home</h2>
-            <p>Welcome to <strong>Little Bites Eatery</strong> — your cozy corner for freshly baked pastries, made with love and warmth every single day.</p>
-        </section>
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-white animate-fade-in">
+                    <h2 class="text-4xl md:text-5xl font-display font-bold mb-4">Freshly Baked <span class="text-accent">Delights</span> Delivered</h2>
+                    <p class="text-xl mb-8 opacity-90">Indulge in our artisan pastries, refreshing smoothies, and freshly squeezed fruit juices. Order online and experience bakery perfection.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="scrollToSection('order')" class="bg-accent text-primary px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300 transform hover:scale-105">Order Now</button>
+                        <button onclick="scrollToSection('pastries')" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-colors duration-300">View Menu</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Replace this image with your own hero image -->
+                    <img src="YOUR_HERO_IMAGE_URL_HERE" alt="Assortment of delicious pastries and drinks" class="rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500" loading="lazy">
+                    <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+                        <div class="text-center">
+                            <div class="text-3xl font-display font-bold text-primary">100+</div>
+                            <div class="text-gray-600">Happy Customers Daily</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Menu Section -->
-        <section id="Menu">
-            <h2>Bakery Menu</h2>
-            <img src="li.jpg" alt="Bites display">
+    <!-- Featured Categories -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-display font-bold text-center text-primary mb-12">Our Specialties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pastries Card -->
+                <div class="category-card bg-cream rounded-2xl p-8 text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-birthday-cake text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-primary mb-4">Little Bites Pastries</h3>
+                    <p class="text-gray-600 mb-6">Perfectly sized treats for every craving. From flaky croissants to decadent cupcakes.</p>
+                    <button onclick="scrollToSection('pastries')" class="text-secondary font-semibold hover:text-primary transition-colors">Browse Pastries →</button>
+                </div>
 
-            <p><i>Croissant - GH₵10</i></p>
-            <hr>
-            <p><i>Chocolate Croissant - GH₵15</i></p>
-            <hr>
-            <p><i>Sausage Rolls - GH₵10</i></p>
-            <hr>
-            <p><i>Sweet Buns - GH₵15</i></p>
-            <ul>
-                <li>Cinnamon Buns</li>
-                <li>Sticky Buns</li>
-                <li>Hot Cross Buns</li>
-            </ul>
-            <hr>
+                <!-- Smoothies Card -->
+                <div class="category-card bg-mint rounded-2xl p-8 text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-blender text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-secondary mb-4">Fresh Smoothies</h3>
+                    <p class="text-gray-600 mb-6">Blended with fresh fruits, yogurt, and natural sweeteners for a healthy boost.</p>
+                    <button onclick="scrollToSection('smoothies')" class="text-secondary font-semibold hover:text-primary transition-colors">Browse Smoothies →</button>
+                </div>
 
-            <p><i>Pies - GH₵10</i></p>
-            <ul>
-                <li>Meat Pie</li>
-                <li>Fish Pie</li>
-                <li>Vegetable Pie</li>
-            </ul>
-        </section>
+                <!-- Juices Card -->
+                <div class="category-card bg-accent/20 rounded-2xl p-8 text-center hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-20 h-20 bg-berry rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-glass-whiskey text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-display font-bold text-berry mb-4">Fruit Juices</h3>
+                    <p class="text-gray-600 mb-6">Freshly squeezed juices packed with vitamins and natural goodness.</p>
+                    <button onclick="scrollToSection('juices')" class="text-secondary font-semibold hover:text-primary transition-colors">Browse Juices →</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- About Us Section -->
-        <section id="About-Us">
-            <h2>Our Story</h2>
-            <p>
-                <strong>Little Bites</strong> is a bakery shop located in the Malejor neighborhood of Adenta Dodowa Road. 
-                Serving sourdough breads, pies, conchas, and a variety of croissants, we use French baking techniques and 
-                locally inspired flavors to create a rotating menu of handcrafted baked goods. 
-                The menu also features many plant-based options.
-            </p>
-        </section>
+    <!-- Pastries Section -->
+    <section id="pastries" class="py-16 bg-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-display font-bold text-primary mb-4">Little Bites Pastries</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Perfectly portioned treats that satisfy your sweet tooth without the guilt.</p>
+            </div>
 
-        <!-- Contact Section -->
-        <section id="Contact-Us">
-            <h2>Contact Us</h2>
-            <address>
-                <p>Email: <a href="mailto:littlebites@pastery.com">littlebites@pastery.com</a></p>
-                <p>Phone: 020000000</p>
-                <p>Location: Oyibi-Malejor</p>
-            </address>
-        </section>
-        <section id="Order">
-  <h2>Place Your Order</h2>
-  <form action="https://formspree.io/f/xvgvgpze" method="POST">
-    <label for="name">Full Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pastry items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <!-- Smoothies Section -->
+    <section id="smoothies" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-display font-bold text-secondary mb-4">Refreshing Smoothies</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Blended to perfection with fresh ingredients and natural flavors.</p>
+            </div>
 
-    <label for="item">Select Item:</label><br>
-    <select id="item" name="item" required>
-      <option value="">--Choose an item--</option>
-      <option value="croissant">Croissant</option>
-      <option value="chocolate-croissant">Chocolate Croissant</option>
-      <option value="sweet-buns">Sweet Buns</option>
-      <option value="meat-pie">Meat Pie</option>
-    </select><br><br>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Smoothie items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required><br><br>
+    <!-- Juices Section -->
+    <section id="juices" class="py-16 bg-mint/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-display font-bold text-berry mb-4">Fresh Fruit Juices</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">100% natural, no added sugars, packed with vitamins and antioxidants.</p>
+            </div>
 
-    <button type="submit">Submit Order</button>
-  </form>
-    </main>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Juice items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Little Bites Eatery. All rights reserved.</p>
+    <!-- Order Online Section -->
+    <section id="order" class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-display font-bold mb-6">Order Online in 3 Easy Steps</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">1</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Browse Our Menu</h3>
+                                <p class="opacity-90">Select from our wide variety of pastries, smoothies, and juices.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">2</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Customize Your Order</h3>
+                                <p class="opacity-90">Add special instructions or customize your items as needed.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-accent text-primary rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0">3</div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2">Checkout & Delivery</h3>
+                                <p class="opacity-90">Choose pickup or delivery and complete your secure payment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-gray-800">
+                    <h3 class="text-2xl font-display font-bold text-primary mb-6">Your Cart</h3>
+                    <div id="cartItems" class="space-y-4 mb-6 max-h-80 overflow-y-auto">
+                        <!-- Cart items will be populated by JavaScript -->
+                        <div class="text-center py-8 text-gray-500">
+                            <i class="fas fa-shopping-cart text-4xl mb-4 opacity-50"></i>
+                            <p>Your cart is empty</p>
+                        </div>
+                    </div>
+                    <div class="border-t pt-6">
+                        <div class="flex justify-between mb-4">
+                            <span class="font-semibold">Subtotal:</span>
+                            <span id="cartSubtotal" class="font-bold text-primary">$0.00</span>
+                        </div>
+                        <button onclick="checkout()" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed" disabled>Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-display font-bold text-primary mb-4">Visit Our Bakery</h2>
+                <p class="text-gray-600">We'd love to see you in person or hear from you online!</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-cream rounded-2xl p-8 mb-8">
+                        <h3 class="text-2xl font-display font-bold text-primary mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Our Location</h4>
+                                    <!-- Replace with your actual address -->
+                                    <p class="text-gray-600" id="businessAddress">YOUR_BUSINESS_ADDRESS_HERE</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Phone Number</h4>
+                                    <!-- Replace with your actual phone number -->
+                                    <p class="text-gray-600" id="businessPhone">YOUR_PHONE_NUMBER_HERE</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Email Address</h4>
+                                    <!-- Replace with your actual email -->
+                                    <p class="text-gray-600" id="businessEmail">YOUR_EMAIL_ADDRESS_HERE</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-mint/30 rounded-2xl p-8">
+                        <h3 class="text-2xl font-display font-bold text-secondary mb-6">Hours of Operation</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Monday - Friday:</span>
+                                <span>7:00 AM - 8:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Saturday:</span>
+                                <span>8:00 AM - 9:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-semibold">Sunday:</span>
+                                <span>9:00 AM - 6:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-display font-bold text-primary mb-6">Send Us a Message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-cookie-bite text-gray-900 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold">Little<span class="text-accent">Bites</span></h3>
+                    </div>
+                    <p class="text-gray-400">Artisan pastries, refreshing drinks, and sweet memories since 2010.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#pastries" class="text-gray-400 hover:text-accent transition-colors">Pastries</a></li>
+                        <li><a href="#smoothies" class="text-gray-400 hover:text-accent transition-colors">Smoothies</a></li>
+                        <li><a href="#juices" class="text-gray-400 hover:text-accent transition-colors">Juices</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Customer Service</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#order" class="text-gray-400 hover:text-accent transition-colors">Order Online</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-accent transition-colors">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-accent transition-colors">Delivery Info</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition-colors">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter for exclusive offers!</p>
+                    <div class="mt-4 flex">
+                        <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l-lg bg-gray-800 border border-gray-700 outline-none">
+                        <button class="bg-accent text-gray-900 px-4 py-2 rounded-r-lg font-semibold hover:bg-yellow-300 transition-colors">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Little Bites Bakery. All rights reserved. | <a href="#" class="hover:text-accent transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-accent transition-colors">Terms of Service</a></p>
+            </div>
+        </div>
     </footer>
 
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-slide-up">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h3 class="text-2xl font-display font-bold text-primary">Your Order</h3>
+                <button onclick="closeCartModal()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto max-h-[60vh]">
+                <div id="modalCartItems">
+                    <!-- Cart items for modal -->
+                </div>
+            </div>
+            <div class="p-6 border-t bg-gray-50">
+                <div class="space-y-4">
+                    <div class="flex justify-between">
+                        <span class="font-semibold">Subtotal:</span>
+                        <span id="modalSubtotal" class="font-bold text-primary">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="font-semibold">Delivery Fee:</span>
+                        <span id="deliveryFee" class="font-bold">$3.99</span>
+                    </div>
+                    <div class="flex justify-between text-xl">
+                        <span class="font-bold">Total:</span>
+                        <span id="modalTotal" class="font-bold text-berry">$3.99</span>
+                    </div>
+                    <button onclick="proceedToCheckout()" class="w-full bg-primary text-white py-3 rounded-lg font-semibold hover:bg-secondary transition-colors duration-300 mt-4">Complete Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-primary text-white px-6 py-3 rounded-lg shadow-xl transform translate-y-full transition-transform duration-300 z-50">
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-check-circle"></i>
+            <span id="toastMessage">Item added to cart!</span>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // CUSTOMIZATION SECTION - EDIT THESE VALUES
+        // ============================================
+        
+        // Business Information - Replace with your actual details
+        const businessInfo = {
+            name: "Little Bites Bakery",
+            address: "YOUR_BUSINESS_ADDRESS_HERE", // Example: "123 Bakery Street, Sweet City, SC 12345"
+            phone: "YOUR_PHONE_NUMBER_HERE", // Example: "(123) 456-7890"
+            email: "YOUR_EMAIL_ADDRESS_HERE", // Example: "hello@sweetdelights.com"
+            hours: {
+                weekdays: "7:00 AM - 8:00 PM",
+                saturday: "8:00 AM - 9:00 PM",
+                sunday: "9:00 AM - 6:00 PM"
+            }
+        };
+
+        // Image URLs - Replace with your own image URLs
+        const imageUrls = {
+            hero: "YOUR_HERO_IMAGE_URL_HERE", // Main hero/banner image
+            pastries: [
+                "YOUR_PASTRY_IMAGE_1_URL_HERE",
+                "YOUR_PASTRY_IMAGE_2_URL_HERE",
+                "YOUR_PASTRY_IMAGE_3_URL_HERE",
+                "YOUR_PASTRY_IMAGE_4_URL_HERE",
+                "YOUR_PASTRY_IMAGE_5_URL_HERE",
+                "YOUR_PASTRY_IMAGE_6_URL_HERE",
+                "YOUR_PASTRY_IMAGE_7_URL_HERE",
+                "YOUR_PASTRY_IMAGE_8_URL_HERE"
+            ],
+            smoothies: [
+                "YOUR_SMOOTHIE_IMAGE_1_URL_HERE",
+                "YOUR_SMOOTHIE_IMAGE_2_URL_HERE",
+                "YOUR_SMOOTHIE_IMAGE_3_URL_HERE",
+                "YOUR_SMOOTHIE_IMAGE_4_URL_HERE",
+                "YOUR_SMOOTHIE_IMAGE_5_URL_HERE",
+                "YOUR_SMOOTHIE_IMAGE_6_URL_HERE"
+            ],
+            juices: [
+                "YOUR_JUICE_IMAGE_1_URL_HERE",
+                "YOUR_JUICE_IMAGE_2_URL_HERE",
+                "YOUR_JUICE_IMAGE_3_URL_HERE",
+                "YOUR_JUICE_IMAGE_4_URL_HERE",
+                "YOUR_JUICE_IMAGE_5_URL_HERE",
+                "YOUR_JUICE_IMAGE_6_URL_HERE"
+            ]
+        };
+
+        // Menu Items - Customize these as needed
+        const menuItems = {
+            pastries: [
+                { 
+                    "id": 1, 
+                    "name": "Mini Croissants", 
+                    "description": "Flaky, buttery French croissants in bite-sized portions", 
+                    "price": 4.99, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 2, 
+                    "name": "Chocolate Chip Cookies", 
+                    "description": "Soft-baked cookies loaded with chocolate chips", 
+                    "price": 3.99, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 3, 
+                    "name": "Fruit Tarts", 
+                    "description": "Mini tarts with fresh seasonal fruits and custard", 
+                    "price": 5.99, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 4, 
+                    "name": "Cinnamon Rolls", 
+                    "description": "Warm, gooey cinnamon rolls with cream cheese frosting", 
+                    "price": 4.49, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 5, 
+                    "name": "Macarons Assortment", 
+                    "description": "Colorful French macarons in various flavors", 
+                    "price": 6.99, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 6, 
+                    "name": "Brownie Bites", 
+                    "description": "Rich, fudgy chocolate brownies in perfect portions", 
+                    "price": 4.29, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 7, 
+                    "name": "Palmier Cookies", 
+                    "description": "Crispy, caramelized puff pastry cookies", 
+                    "price": 3.79, 
+                    "category": "pastry"
+                },
+                { 
+                    "id": 8, 
+                    "name": "Lemon Bars", 
+                    "description": "Tangy lemon curd on a buttery shortbread crust", 
+                    "price": 4.89, 
+                    "category": "pastry"
+                }
+            ],
+            smoothies: [
+                { 
+                    "id": 9, 
+                    "name": "Berry Blast", 
+                    "description": "Mixed berries, banana, and Greek yogurt", 
+                    "price": 5.99, 
+                    "category": "smoothie"
+                },
+                { 
+                    "id": 10, 
+                    "name": "Tropical Paradise", 
+                    "description": "Mango, pineapple, coconut milk, and spinach", 
+                    "price": 6.49, 
+                    "category": "smoothie"
+                },
+                { 
+                    "id": 11, 
+                    "name": "Green Detox", 
+                    "description": "Kale, spinach, apple, lemon, and ginger", 
+                    "price": 5.79, 
+                    "category": "smoothie"
+                },
+                { 
+                    "id": 12, 
+                    "name": "Chocolate Banana", 
+                    "description": "Banana, cocoa powder, almond milk, and dates", 
+                    "price": 5.49, 
+                    "category": "smoothie"
+                },
+                { 
+                    "id": 13, 
+                    "name": "Peanut Butter Power", 
+                    "description": "Banana, peanut butter, oats, and almond milk", 
+                    "price": 6.29, 
+                    "category": "smoothie"
+                },
+                { 
+                    "id": 14, 
+                    "name": "Strawberry Sunrise", 
+                    "description": "Strawberries, orange juice, and Greek yogurt", 
+                    "price": 5.99, 
+                    "category": "smoothie"
+                }
+            ],
+            juices: [
+                { 
+                    "id": 15, 
+                    "name": "Fresh Orange Juice", 
+                    "description": "Freshly squeezed Florida oranges", 
+                    "price": 4.99, 
+                    "category": "juice"
+                },
+                { 
+                    "id": 16, 
+                    "name": "Apple Ginger", 
+                    "description": "Crisp apples with a kick of fresh ginger", 
+                    "price": 5.29, 
+                    "category": "juice"
+                },
+                { 
+                    "id": 17, 
+                    "name": "Carrot Orange", 
+                    "description": "Sweet carrots blended with fresh oranges", 
+                    "price": 5.49, 
+                    "category": "juice"
+                },
+                { 
+                    "id": 18, 
+                    "name": "Watermelon Mint", 
+                    "description": "Refreshing watermelon with fresh mint leaves", 
+                    "price": 4.79, 
+                    "category": "juice"
+                },
+                { 
+                    "id": 19, 
+                    "name": "Pineapple Lime", 
+                    "description": "Tropical pineapple with zesty lime", 
+                    "price": 5.99, 
+                    "category": "juice"
+                },
+                { 
+                    "id": 20, 
+                    "name": "Beetroot Berry", 
+                    "description": "Nutritious beetroot with mixed berries", 
+                    "price": 6.29, 
+                    "category": "juice"
+                }
+            ]
+        };
+
+        // ============================================
+        // END OF CUSTOMIZATION SECTION
+        // ============================================
+
+        // Cart state
+        let cart = JSON.parse(localStorage.getItem("sweetDelightsCart")) || [];
+        const deliveryFee = 3.99;
+
+        // DOM Elements
+        const cartCountElement = document.getElementById("cartCount");
+        const cartItemsElement = document.getElementById("cartItems");
+        const cartSubtotalElement = document.getElementById("cartSubtotal");
+        const checkoutButton = document.querySelector("button[onclick='checkout()']");
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const cartModal = document.getElementById("cartModal");
+        const modalCartItems = document.getElementById("modalCartItems");
+        const modalSubtotalElement = document.getElementById("modalSubtotal");
+        const modalTotalElement = document.getElementById("modalTotal");
+        const toast = document.getElementById("toast");
+        const toastMessage = document.getElementById("toastMessage");
+
+        // Initialize the page
+        document.addEventListener("DOMContentLoaded", function() {
+            // Update business information
+            updateBusinessInfo();
+            
+            // Render menu items with custom images
+            renderMenuItems();
+            
+            // Update cart display
+            updateCartDisplay();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Setup smooth scrolling
+            setupSmoothScrolling();
+        });
+
+        // Update business information on the page
+        function updateBusinessInfo() {
+            // Update hero image
+            const heroImage = document.querySelector("#home img");
+            if (imageUrls.hero && imageUrls.hero !== "YOUR_HERO_IMAGE_URL_HERE") {
+                heroImage.src = imageUrls.hero;
+            }
+
+            // Update contact information
+            document.getElementById("businessAddress").textContent = businessInfo.address;
+            document.getElementById("businessPhone").textContent = businessInfo.phone;
+            document.getElementById("businessEmail").textContent = businessInfo.email;
+
+            // Update hours of operation
+            const hoursElements = document.querySelectorAll(".bg-mint\\/30 .space-y-3 div");
+            if (hoursElements.length >= 3) {
+                hoursElements[0].querySelector("span:last-child").textContent = businessInfo.hours.weekdays;
+                hoursElements[1].querySelector("span:last-child").textContent = businessInfo.hours.saturday;
+                hoursElements[2].querySelector("span:last-child").textContent = businessInfo.hours.sunday;
+            }
+        }
+
+        // Render menu items with custom images
+        function renderMenuItems() {
+            // Assign images to menu items
+            assignImagesToMenuItems();
+
+            // Render pastries
+            const pastriesContainer = document.querySelector("#pastries .grid");
+            pastriesContainer.innerHTML = menuItems.pastries.map((item, index) => createMenuItemCard(item, index)).join("");
+
+            // Render smoothies
+            const smoothiesContainer = document.querySelector("#smoothies .grid");
+            smoothiesContainer.innerHTML = menuItems.smoothies.map((item, index) => createMenuItemCard(item, index)).join("");
+
+            // Render juices
+            const juicesContainer = document.querySelector("#juices .grid");
+            juicesContainer.innerHTML = menuItems.juices.map((item, index) => createMenuItemCard(item, index)).join("");
+        }
+
+        // Assign custom images to menu items
+        function assignImagesToMenuItems() {
+            // Assign pastry images
+            menuItems.pastries.forEach((item, index) => {
+                if (imageUrls.pastries[index] && imageUrls.pastries[index] !== `YOUR_PASTRY_IMAGE_${index + 1}_URL_HERE`) {
+                    item.image = imageUrls.pastries[index];
+                } else {
+                    // Fallback to placeholder if no custom image
+                    item.image = `https://picsum.photos/300/200?random=${item.id}`;
+                }
+            });
+
+            // Assign smoothie images
+            menuItems.smoothies.forEach((item, index) => {
+                if (imageUrls.smoothies[index] && imageUrls.smoothies[index] !== `YOUR_SMOOTHIE_IMAGE_${index + 1}_URL_HERE`) {
+                    item.image = imageUrls.smoothies[index];
+                } else {
+                    // Fallback to placeholder if no custom image
+                    item.image = `https://picsum.photos/300/200?random=${item.id}`;
+                }
+            });
+
+            // Assign juice images
+            menuItems.juices.forEach((item, index) => {
+                if (imageUrls.juices[index] && imageUrls.juices[index] !== `YOUR_JUICE_IMAGE_${index + 1}_URL_HERE`) {
+                    item.image = imageUrls.juices[index];
+                } else {
+                    // Fallback to placeholder if no custom image
+                    item.image = `https://picsum.photos/300/200?random=${item.id}`;
+                }
+            });
+        }
+
+        // Create menu item card
+        function createMenuItemCard(item, index) {
+            return `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fade-in">
+                    <div class="relative overflow-hidden">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                        <div class="absolute top-4 right-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                            $${item.price.toFixed(2)}
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-display font-bold text-primary mb-2">${item.name}</h3>
+                        <p class="text-gray-600 mb-4">${item.description}</p>
+                        <div class="flex justify-between items-center">
+                            <button onclick="addToCart(${item.id})" class="bg-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-secondary transition-colors duration-300 flex items-center space-x-2">
+                                <i class="fas fa-plus"></i>
+                                <span>Add to Cart</span>
+                            </button>
+                            <span class="text-2xl font-bold text-secondary">$${item.price.toFixed(2)}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Cart functions
+        function addToCart(itemId) {
+            // Find the item in menuItems
+            let item = null;
+            for (const category in menuItems) {
+                const foundItem = menuItems[category].find(i => i.id === itemId);
+                if (foundItem) {
+                    item = foundItem;
+                    break;
+                }
+            }
+
+            if (!item) return;
+
+            // Check if item already in cart
+            const existingItem = cart.find(cartItem => cartItem.id === itemId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...item,
+                    quantity: 1
+                });
+            }
+
+            // Save to localStorage
+            localStorage.setItem("sweetDelightsCart", JSON.stringify(cart));
+            
+            // Update display
+            updateCartDisplay();
+            
+            // Show notification
+            showToast("Item added to cart!");
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            localStorage.setItem("sweetDelightsCart", JSON.stringify(cart));
+            updateCartDisplay();
+            showToast("Item removed from cart");
+        }
+
+        function updateQuantity(itemId, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(itemId);
+                return;
+            }
+
+            const item = cart.find(item => item.id === itemId);
+            if (item) {
+                item.quantity = newQuantity;
+                localStorage.setItem("sweetDelightsCart", JSON.stringify(cart));
+                updateCartDisplay();
+            }
+        }
+
+        function updateCartDisplay() {
+            // Update cart count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+
+            // Update cart items in sidebar
+            if (cart.length === 0) {
+                cartItemsElement.innerHTML = `
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-shopping-cart text-4xl mb-4 opacity-50"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                cartSubtotalElement.textContent = "$0.00";
+                checkoutButton.disabled = true;
+            } else {
+                cartItemsElement.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <div class="flex items-center space-x-4">
+                            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded">
+                            <div>
+                                <h4 class="font-semibold text-primary">${item.name}</h4>
+                                <p class="text-sm text-gray-600">$${item.price.toFixed(2)} each</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})" class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center">
+                                <i class="fas fa-minus text-sm"></i>
+                            </button>
+                            <span class="font-semibold">${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})" class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center">
+                                <i class="fas fa-plus text-sm"></i>
+                            </button>
+                            <button onclick="removeFromCart(${item.id})" class="ml-4 text-red-500 hover:text-red-700">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `).join("");
+
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                cartSubtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+                checkoutButton.disabled = false;
+            }
+
+            // Update modal cart if open
+            updateModalCart();
+        }
+
+        function updateModalCart() {
+            if (cart.length === 0) {
+                modalCartItems.innerHTML = `
+                    <div class="text-center py-8 text-gray-500">
+                        <i class="fas fa-shopping-cart text-4xl mb-4 opacity-50"></i>
+                        <p>Your cart is empty</p>
+                    </div>
+                `;
+                modalSubtotalElement.textContent = "$0.00";
+                modalTotalElement.textContent = "$3.99";
+            } else {
+                modalCartItems.innerHTML = cart.map(item => `
+                    <div class="flex items-center justify-between p-4 border-b">
+                        <div class="flex items-center space-x-4">
+                            <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded-lg">
+                            <div>
+                                <h4 class="font-semibold text-primary">${item.name}</h4>
+                                <p class="text-sm text-gray-600">$${item.price.toFixed(2)} × ${item.quantity}</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="font-bold text-lg">$${(item.price * item.quantity).toFixed(2)}</div>
+                            <div class="flex space-x-2 mt-2">
+                                <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})" class="text-sm text-gray-500 hover:text-primary">-</button>
+                                <span class="text-sm">${item.quantity}</span>
+                                <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})" class="text-sm text-gray-500 hover:text-primary">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join("");
+
+                const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const total = subtotal + deliveryFee;
+                modalSubtotalElement.textContent = `$${subtotal.toFixed(2)}`;
+                modalTotalElement.textContent = `$${total.toFixed(2)}`;
+            }
+        }
+
+        // Modal functions
+        function openCartModal() {
+            cartModal.classList.remove("hidden");
+            cartModal.classList.add("flex");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeCartModal() {
+            cartModal.classList.add("hidden");
+            cartModal.classList.remove("flex");
+            document.body.style.overflow = "auto";
+        }
+
+        function checkout() {
+            openCartModal();
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showToast("Your cart is empty!");
+                return;
+            }
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + deliveryFee;
+            
+            // In a real application, this would redirect to a payment processor
+            showToast(`Order placed! Total: $${total.toFixed(2)}`);
+            
+            // Clear cart
+            cart = [];
+            localStorage.setItem("sweetDelightsCart", JSON.stringify(cart));
+            updateCartDisplay();
+            closeCartModal();
+        }
+
+        // Toast notification
+        function showToast(message) {
+            toastMessage.textContent = message;
+            toast.classList.remove("translate-y-full");
+            
+            setTimeout(() => {
+                toast.classList.add("translate-y-full");
+            }, 3000);
+        }
+
+        // Event listeners
+        function setupEventListeners() {
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener("click", function() {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener("click", function(event) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                    mobileMenu.classList.add("hidden");
+                }
+            });
+
+            // Cart button
+            document.getElementById("cartButton").addEventListener("click", openCartModal);
+
+            // Close modal when clicking outside
+            cartModal.addEventListener("click", function(event) {
+                if (event.target === cartModal) {
+                    closeCartModal();
+                }
+            });
+
+            // Contact form
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+                
+                // In a real application, this would send data to a server
+                showToast("Message sent! We'll get back to you soon.");
+                this.reset();
+            });
+
+            // Navigation links
+            document.querySelectorAll(".nav-link, .mobile-nav-link").forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    scrollToSection(targetId);
+                    
+                    // Close mobile menu if open
+                    mobileMenu.classList.add("hidden");
+                });
+            });
+        }
+
+        // Smooth scrolling
+        function setupSmoothScrolling() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute("href").substring(1);
+                    scrollToSection(targetId);
+                });
+            });
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                window.scrollTo({
+                    top: element.offsetTop - 80,
+                    behavior: "smooth"
+                });
+            }
+        }
+
+        // Prevent default anchor behavior
+        document.querySelectorAll("a").forEach(anchor => {
+            anchor.addEventListener("click", function(event) {
+                if (this.getAttribute("href") && this.getAttribute("href").startsWith("#")) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
-</html>
